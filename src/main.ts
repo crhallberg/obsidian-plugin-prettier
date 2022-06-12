@@ -94,7 +94,7 @@ interface PrettierPluginSettings {
 
 // There is a prettier bug where they add extra space after a list item
 const fixListItemIndent = (text: string): string => {
-  return text.replace(/^([ ]*)[-*][ ]+/gm, "$1- ");
+  return text.replace(/^([> ]*)[-*][ ]+/gm, "$1- ");
 };
 
 export default class PrettierPlugin extends Plugin {
